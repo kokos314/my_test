@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+<h1>{{name}}</h1>
+<div>{{name|lower}}</div>
+<div>{{'HELLO'|lower}}</div>
+
+<div>
+<a href="{{ path('my_show_test', {'myName':name}) }}">{{ path('my_show_test', {'myName':name}) }}</a>
+</div>
+
+<ul>
+	{%  for str in txt %}
+	<li>{{ str }}</li>
+	{% endfor %}
+</ul>
+
+<!-- <div>{{dump()}}</div> -->
+    	
+{% endblock %}
